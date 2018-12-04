@@ -1,0 +1,285 @@
+@CHARSET "UTF-8";
+/*
+* @Author: Marte
+* @Date:   2018-05-28 08:17:23
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-05-29 01:43:16
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, em, img, strong, b, u, i, dl, dt, dd, ol, ul, li, form, label, table, tbody, thead, tr, th, td{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+ol, ul { list-style: none; }
+img { border: 0;}
+a{
+    text-decoration: none;
+}
+html,body{
+ -webkit-user-select: none; /*webkit娴忚鍣�*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*鏃╂湡娴忚鍣�*/
+    user-select: none;
+    overflow: hidden;
+   
+}
+.xml{
+    margin:20px 0;
+    font-size:15px;
+}
+#caozuo{
+	width:100px;
+	height:90px;
+}
+.bianji{
+	cursor:pointer;
+	width: 60px;
+    height: 30px;
+    position:absolute;
+    left:38px;
+    top:36px;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 4px;
+    background: #F8C007;
+}
+.shouli{
+	cursor:pointer;
+	width: 60px;
+    height: 30px;
+    position:absolute;
+    left:126px;
+    top:36px;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 4px;
+    background:red;
+}
+.bianji>span{
+        cursor: pointer;
+        display: inline-block;
+        margin:4px 13px;
+        padding:0 0;
+        position:absolute;
+        left:23px;
+        top: 0px;
+}
+.shouli>span{
+        cursor: pointer;
+        display: inline-block;
+        margin:4px 13px;
+        padding:0 0;
+        position:absolute;
+        left:23px;
+        top: 0px;
+}
+
+.td{
+	position:relative;
+}
+.delete{
+	cursor:pointer;
+	width: 94px;
+    height: 30px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 17px;
+    background: red;
+    float:right;
+    position:absolute;
+    left:148px;
+    top:36px;
+}
+.delete>span{
+    display: inline-block;
+    cursor: pointer;
+    margin:4px 8px;
+}
+
+table{
+    position: absolute;
+    width: 1400px;
+   	left:4%;
+    border-collapse:collapse
+}
+
+table thead{
+text-align: center;
+
+}
+table tbody{
+    text-align:center;
+
+}
+table thead th{
+    width:17%;
+    height:100px;
+    border:1px solid #dddddd;
+    background:#eeeeef;
+}
+table tbody td{
+    height:80px;
+    border:1px solid #dddddd;
+}
+#submit{
+    display:none;
+    width:100px;
+    height:300px;
+    background:blue;
+}
+/**
+分页窗口
+**/
+#fenye{
+	width:700px;
+	height:20px;
+	position:absolute;
+	left:72%;
+	top:83%;
+	 color:#fff;
+}
+/*编辑窗口*/
+#update{
+	display:none;
+	background:#fff;
+	width:450px;
+	height:500px;
+	box-shadow:1px 4px 9px #888888;
+	position: absolute;
+    left: 28%;
+    top:16%;
+    color:#fff;
+    border-radius: 6px;
+}
+.update_title{
+	width:450px;
+	height:100px;
+	background:#4969C7;
+	border-radius: 6px;
+}
+.title{
+	display:inline-block;
+	color:#ccc;
+	font-size:18px;
+}
+.icon1{
+	position: absolute;
+	left:-14%;
+	top:6%;
+}
+.icon2{
+	position: absolute;
+	left:-14%;
+	top:40%;
+}
+.icon3{
+	position: absolute;
+	left:-14%;
+	top:76%;
+}
+#addwindow{
+	display:none;
+	background:#fff;
+	width:450px;
+	height:500px;
+	box-shadow:1px 4px 9px #888888;
+	position: absolute;
+    left: 28%;
+    top:16%;
+    color:#fff;
+    border-radius: 6px;
+}
+.icon{
+	display:inline-block;
+	padding:5px 0;
+	
+}
+/**
+窗口标题
+*/
+.titless{
+	font-family:Microsoft YaHei;
+	font-size:20px;
+	color:#fff;
+	position: absolute;
+	left:46%;
+	top:5%;
+}
+.titlen{
+	font-family:Microsoft YaHei;
+	color:#fff;
+	font-size:13px;
+	position: absolute;
+	left:46%;
+	top:10%;
+}
+.input{
+	width: 280px;
+	height: 40px;
+	
+}
+.submit{
+	font-family:Microsoft YaHei;
+	cursor:pointer;
+	font-size:18px;
+	width:400px;
+	height:54px;
+	position: absolute;
+	left:-31%;
+	top:127%;
+	border:none;
+	background: #F8C007;
+	border-radius: 3px;
+	color:#fff;
+}
+#updateicon{
+	width:40px;
+	height:40px;
+	position:absolute;
+	left:35%;
+	top:5%;
+}
+.submit:hover{
+	font-family:Microsoft YaHei;
+	background:#ccc;
+	transform:all 0.3s;
+}
+#closepng1{
+	width:25px;
+	height:25px;
+	float:right;
+}
+#closepng2{
+	
+	width:25px;
+	height:25px;
+	float:right;
+}
+/**
+form框架的位置
+*/
+#form{
+	font-family:Microsoft YaHei;
+	position:absolute;
+	left:26%;
+	top:27%;
+}
+
+/*关闭标签*/
+#closepng{
+	margin:0 0;
+}
+#addsubmit{
+	font-family:Microsoft YaHei;
+	cursor:pointer;
+	font-size:18px;
+	width:400px;
+	height:54px;
+	position: absolute;
+	left:-27%;
+	top:127%;
+	border:none;
+	background: #F8C007;
+	border-radius: 3px;
+	color:#fff;
+}

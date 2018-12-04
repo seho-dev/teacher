@@ -1,0 +1,180 @@
+@CHARSET "UTF-8";
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, em,
+	img, strong, b, u, i, dl, dt, dd, ol, ul, li, form, label, table, tbody,
+	thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img {
+	border: 0;
+}
+
+html, body {
+	overflow: hidden;
+}
+
+#window {
+	width: 70%;
+	height: 700px;
+	box-shadow: 3px 3px 3px 3px #888888;
+	margin: 3% auto;
+	position: relative;
+}
+
+#left {
+	width: 595px;
+	height: 700px;
+	overflow: hidden;
+	background: #ccc;
+}
+
+#right {
+	width: 595px;;
+	height: 700px;
+	float: right;
+	position: absolute;
+	left: 50%;
+	top: 0%;
+	position: relative;
+}
+
+.imghead {
+	width: 595px;
+	height: 200px;
+	background: #4969C7;
+	position: absolute;
+	left: 0%;
+	top: 72%;
+	position: relative;
+}
+/*头像的设置*/
+#headimg {
+	cursor: pointer;
+	width: 70px;
+	height: 70px;
+	border-radius: 36px;
+	position: absolute;
+	left: 16%;
+	top: 25%;
+}
+
+.username {
+	color: #fff;
+	position: absolute;
+	left: 17%;
+	top: 80%;
+}
+/*列表的样式*/
+.information {
+	width: 500px;
+	height: auto;
+	position: absolute;
+	left: -76%;
+	top: -87%;
+}
+
+.usernames {
+	font-size: 20px;
+	margin-left: 20px;
+	padding-bottom: 5px;
+}
+/**
+更改头像的弹窗
+*/
+#headwindow {
+	display: none;
+	width: 471px;
+	height: 345px;
+	box-shadow: 0px 13px 25px 3px #ccc;
+	background: #fff;
+	position: absolute;
+	left: 23%;
+	top: 20%;
+	border-radius: 6px;
+}
+
+#updateimg {
+	display: block;
+	width: 160px;
+	height: 160px;
+	border-radius: 74px;
+	position: absolute;
+	left: -10%;
+	top: -13%;
+}
+
+.chagehead {
+	font-size: 27px;
+	width: 140px;
+	margin: 3% 55%;
+	color: black;
+	width: 140px;
+}
+
+.chageheads {
+	display: inline-block;
+	font-size: 23px;
+	width: 340px;
+	color: black;
+	position: absolute;
+	left: 46%;
+	top: 18%;
+}
+
+.myFileUpload {
+	opacity: 0;
+	width: 100px;
+	height: 40px;
+	border: none;
+	position: absolute;
+	left: 55%;
+	top: 34%;
+}
+
+#choosefile {
+	position: absolute;
+	left: 55%;
+	top: 34%;
+	display: block;
+	width: 100px;
+	height: 40px;
+	background-color: #00b3ee;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	font: normal normal normal 16px/40px 'Microsoft YaHei';
+	cursor: pointer;
+	border-radius: 4px;
+}
+/*显示上传文件夹名的Div*/
+.show {
+	color:black;
+	position: absolute;
+	left: 55%;
+	top: 45%;
+	width: 100%;
+	height: 30px;
+	font: normal normal normal 14px/30px 'Microsoft YaHei';
+}
+#sure{
+	position: absolute;
+	left: 40%;
+	top: 55%;
+	display: block;
+	width: 250px;
+	height: 40px;
+	background-color:#4969C7;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	font: normal normal normal 16px/40px 'Microsoft YaHei';
+	cursor: pointer;
+	border-radius: 4px;
+}

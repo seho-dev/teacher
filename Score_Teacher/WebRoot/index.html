@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教师满意度-教师端</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="animate.css/animate.css">
+    <script src="jquery/jquery-3.0.0.js"></script>
+    <script src="bootstrap/bootstrap.js"></script>
+    <script src="layer/layer.js"></script>
+   <link rel="stylesheet" href="layer/layer.css">
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            background:#068AEF;
+        }
+        #box{
+            background: #fff;
+            width: 400px;
+            height: 500px;
+            border-radius:4px ;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin:auto;
+        }
+        #form{
+            margin: 30px 0;
+        }
+.alert{
+    width:100px;
+    height: 100px;
+}
+    </style>
+</head>
+<body>
+        <div id="box" class="container animated bounceInDown">
+    <div id="form">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">老师姓名</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请依据课程表上的班级名称">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword2">老师性别</label>
+                    <input type="text" class="form-control" id="exampleInputPassword2" placeholder="请依据课程表上的专业名称">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword2">老师电话</label>
+                    <input type="number" class="form-control" id="exampleInputPassword2" placeholder="请依据课程表上的专业名称">
+                </div>
+                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">提交</button>
+                <button type="reset" class="btn btn-danger" data-toggle="modal" data-target="#myModal">重置</button>
+    </div>
+        </div>
+        <!--弹框-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">重要信息，请各位老师谨记</h4>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary "  id="SubmitInformation">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<script>
+    $(function () {
+        //点击生成密钥
+        $('#Pass').click(function () {
+            document.getElementById("exampleInputPassword5").value=randomString(6);
+        });
+
+        $(':submit').click(function () {
+                $('.modal-body').html("老师名称:"+$($('input')[0]).val()+"</br>"+"老师性别:"+$($('input')[1]).val()+"</br>"+"老师电话:"+$($('input')[2]).val()+"<h4>提示：各位老师填写的信息非常重要，为了确保满意度分数正确，请不要重复提交或者错误提交，请您最后确认一遍</h4>");
+        })
+        //点击提交到ajax
+        $('#SubmitInformation').click(function () {
+                $.ajax({
+                    url:'submitteacher.do?type=information',
+                    type:'post',
+                    data:{
+                        teacherName:$($('input')[0]).val(),
+                        teachersex:$($('input')[1]).val(),
+                        teacherphone:$($('input')[2]).val()
+                    },
+                    success:function (data) {
+                        //提交成功
+						if(data=="success"){
+								layer.msg('恭喜，提交成功');
+						}else{
+							layer.msg('不好意思，系统繁忙，请稍后再试');
+						}
+                    },
+                    err:function (data) {
+                        //提交失败
+                        if(data=="false"){
+									layer.msg('不好意思，系统繁忙，请稍后再试');
+						}
+                    }
+                })
+        })
+
+     });
+    function randomString(len) {
+        len = len || 32;
+        /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+        var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
+        var maxPos = $chars.length;
+        var pwd = '';
+        for (i = 0; i < len; i++) {
+            pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+        }
+        return pwd;
+    }
+</script>
+</body>
+</html>

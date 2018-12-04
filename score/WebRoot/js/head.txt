@@ -1,0 +1,13 @@
+<!--导入semantic框架-->
+    <link rel="stylesheet" type="text/css" href="semantic UI/semantic.css">
+    <link rel="stylesheet" type="text/css" href="semantic UI/semantic.min.css">
+    <script src="semantic UI/semantic.min.js"></script>
+    <script src="semantic UI/semantic.js"></script>
+    <!--导入唯译框架包-->
+    <script src="WYUtil Edition v0.5/js/WYUtil/wyUtil.js"></script>
+    <link rel="stylesheet" type="text/css" href="WYUtil Edition v0.5/css/wyUtilStyle.css">
+    <!--导入jq包-->
+    <script src="semantic UI/jquery-1.10.2.js"></script>
+    <script src="semantic UI/jquery-1.10.2.min.js"></script>
+    <script src="semantic UI/jquery-3.0.0.js"></script>
+    <!--正文CSS and JS-->

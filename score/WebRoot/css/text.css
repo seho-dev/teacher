@@ -1,0 +1,150 @@
+/*
+* @Author: Marte
+* @Date:   2018-05-31 19:28:56
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-06-04 11:58:04
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, em, img, strong, b, u, i, dl, dt, dd, ol, ul, li, form, label, table, tbody, thead, tr, th, td{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+ol, ul { list-style: none; }
+img { border: 0;}
+html,body{
+    overflow: hidden;
+}
+#systime{
+    height: 100px;
+    width: 400px;
+}
+#index{
+    margin:24px 0;
+    height:40px;
+    font-size: 28px;
+}
+.hr{
+    width: 93%;
+    border-bottom: 1px solid #ccc;
+    margin:2% 0;
+}
+.user_text{
+    font-size: 17px;
+    position: absolute;
+    left: 8%;
+    top: 19%;
+    width: 225px;
+    height:90px;
+    padding: 10px 0;
+    border-right:1px solid #ccc;
+}
+.user_fangke_img{
+    position: absolute;
+    left: 23%;
+    top: 18%;
+}
+.user_fangke{
+    font-size: 24px;
+    color:#8A8A8A;
+    position: absolute;
+    left: 30%;
+    top: 19%;
+    width: 225px;
+    height:90px;
+    padding: 10px 0;
+    border-right:1px solid #ccc;
+}
+#enlish1{
+	display:inline-block;
+	width:200px;
+	height:auto;
+	 color:#8A8A8A;
+	 font-size: 24px;
+	 position: absolute;
+	 left:514px;
+	 top:25%;
+}
+#enlish2{
+	display:inline-block;
+	width:200px;
+	height:auto;
+	 color:#8A8A8A;
+	 font-size:24px;
+	 position: absolute;
+	 left:920px;
+	 top:25%;
+}
+#enlish3{
+	display:inline-block;
+	width:200px;
+	height:auto;
+	 color:#8A8A8A;
+	 font-size:24px;
+	 position: absolute;
+	 left:1329px;
+	 top:25%;
+}
+.user_group_img{
+    position: absolute;
+    left: 46%;
+    top: 18%;
+}
+.user_group{
+    font-size: 24px;
+    color:#8A8A8A;
+    position: absolute;
+    left: 54%;
+    top: 19%;
+    width: 225px;
+    height:90px;
+    padding: 10px 0;
+    border-right:1px solid #ccc;
+}
+.user_emil_img{
+    position: absolute;
+    left: 71%;
+    top: 18%;
+}
+.user_emil{
+    font-size: 24px;
+    color:#8A8A8A;
+    position: absolute;
+    left: 78%;
+    top: 19%;
+    width: 225px;
+    height:90px;
+    padding: 10px 0;
+}
+.tz{
+font-size: 20px;
+    width: 77px;
+    height: 30px;
+    border-right:4px solid #4969C7;
+}
+#news{
+    position: absolute;
+    left: 1%;
+    top: 41%;
+}
+#news>ul>li{
+    margin-top:16px;
+}
+#myStat{
+    position: absolute;
+    left: 25%;
+    top: 37%;
+}
+#myStat1{
+    position: absolute;
+    left: 49%;
+    top: 37%;
+}
+#myStat3{
+    position: absolute;
+    left:164%;
+}
+#tjt{
+	height: auto;
+}
+
+

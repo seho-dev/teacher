@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教师满意度-班长端</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="animate.css/animate.css">
+    <script src="jquery/jquery-3.0.0.js"></script>
+    <script src="bootstrap/bootstrap.js"></script>
+    <script src="layer/layer.js"></script>
+   <link rel="stylesheet" href="layer/layer.css">
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            background:#068AEF;
+        }
+        #box{
+            background: #fff;
+            width: 400px;
+            height: 500px;
+            border-radius:4px ;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin:auto;
+        }
+        #form{
+            margin: 30px 0;
+        }
+.alert{
+    width:100px;
+    height: 100px;
+}
+    </style>
+</head>
+<body>
+        <div id="box" class="container animated bounceInDown">
+    <div id="form">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">班级名称</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请依据课程表上的班级名称">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword2">专业名称</label>
+                    <input type="text" class="form-control" id="exampleInputPassword2" placeholder="请依据课程表上的专业名称">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword3">任课老师</label>
+                    <input type="text" class="form-control" id="exampleInputPassword3" placeholder="请依据课程表上的课程老师">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword4">任课课程</label>
+                    <input type="text" class="form-control" id="exampleInputPassword4" placeholder="请依据课程表上的课程名称">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword5">设置密钥</label>
+                    <input type="text" class="form-control password" id="exampleInputPassword5" placeholder="点击下方获取" disabled="disabled">
+                </div>
+                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">提交</button>
+                <button type="button" class="btn btn-warning" id="Pass">自动生成6位密钥</button>
+    </div>
+        </div>
+        <!--弹框-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">重要信息，请各位班长谨记</h4>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary "  id="SubmitInformation">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<script>
+    $(function () {
+        //点击生成密钥
+        $('#Pass').click(function () {
+            document.getElementById("exampleInputPassword5").value=randomString(6);
+        });
+
+        $(':submit').click(function () {
+                $('.modal-body').html("班级名称:"+$($('input')[0]).val()+"</br>"+"专业名称:"+$($('input')[1]).val()+"</br>"+"任课老师:"+$($('input')[2]).val()+"<br>"+"任课课程:"+$($('input')[3]).val()+"</br>"+"统一答题密钥口令:"+$($('input')[4]).val()+"</br>"+"<h4>提示：各位班长填写的信息非常重要，请务必拍照或者复制以上文本内容<br>本班同学提交调查时填写的信息以及口令必须完一致，口令区分大小写，请妥善保管。</h4>");
+        })
+        //点击提交到ajax
+        $('#SubmitInformation').click(function () {
+                $.ajax({
+                    url:'submitinformation.do?type=information',
+                    type:'post',
+                    data:{
+                        ClassName:$($('input')[0]).val(),
+                        ClassZhuanye:$($('input')[1]).val(),
+                        ClassTeacher:$($('input')[2]).val(),
+                        ClassKecheng:$($('input')[3]).val(),
+                        Passport:$($('input')[4]).val(),
+                    },
+                    success:function (data) {
+                        //提交成功
+						if(data=="success"){
+								layer.msg('恭喜，提交成功');
+						}else if(data=="noteacher"){
+							layer.msg('您填写的老师可能没有提交资料或者提交错误或者您输入的与实际不符');
+						}
+                    },
+                    err:function (data) {
+                        //提交失败
+                        if(data=="false"){
+									layer.msg('不好意思，系统繁忙，请稍后再试');
+						}
+                    }
+                })
+        })
+
+     });
+    function randomString(len) {
+        len = len || 32;
+        /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+        var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
+        var maxPos = $chars.length;
+        var pwd = '';
+        for (i = 0; i < len; i++) {
+            pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+        }
+        return pwd;
+    }
+</script>
+</body>
+</html>

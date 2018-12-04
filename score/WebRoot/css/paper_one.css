@@ -1,0 +1,26 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, em, img, strong, b, u, i, dl, dt, dd, ol, ul, li, form, label, table, tbody, thead, tr, th, td,{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+ol, ul { list-style: none; }
+img { border: 0;}
+#choose{
+    border-radius:5px;
+    width: 500px;
+    height:300px;
+   margin:14% auto;
+   background:#4969C7;
+}
+#choose>p{
+    color:#fff;
+    margin:0 33%;
+    padding:20px 0;
+    font-size: 20px;
+}
+#choose>form{
+    margin:0 110px;
+}
+#choose>form>p{
+    color:#fff;
+}

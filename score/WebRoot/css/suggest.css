@@ -1,0 +1,84 @@
+/*
+* @Author: Marte
+* @Date:   2018-05-29 00:47:14
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-05-29 09:30:43
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, em,
+	img, strong, b, u, i, dl, dt, dd, ol, ul, li, form, label, table, tbody,
+	thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img {
+	border: 0;
+}
+
+body, html {
+	-webkit-user-select: none; /*webkit娴忚鍣�*/
+	-ms-user-select: none; /*IE10*/
+	-khtml-user-select: none; /*鏃╂湡娴忚鍣�*/
+	user-select: none;
+	/*background:url('http://p9s6xow5u.bkt.clouddn.com/suggestback.png');*/
+}
+
+.zy, .name, .suggest {
+	margin: 49px 33%;
+}
+
+input {
+	width: 200px;
+	height: 40px;
+	margin: 0 39px;
+	border: none;
+	border-bottom: 1px solid #ccc;
+}
+
+input:focus {
+	border: 1px solid #ccc;
+}
+
+.inputname {
+	margin: 0 108px;
+}
+
+.yijian {
+	margin: 0 33%;
+}
+
+#btnRefresh {
+	width: 200px;
+	height: 36px;
+	border: none;
+	position: absolute;
+	left: 35%;
+	top: 71%;
+}
+
+.yanzhengma {
+	margin: 39px 33%;
+}
+
+#canvas1 {
+	width: 200px;
+	height: 70px;
+	position: absolute;
+	left: 48%;
+	top: 67%;
+}
+
+.tijiao {
+	border-radius: 4px;
+	position: absolute;
+	left: 36%;
+	top: 82%;
+	background: #4969C7;
+	color: #fff;
+}

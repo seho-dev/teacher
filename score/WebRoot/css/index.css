@@ -1,0 +1,22 @@
+/*
+* @Author: Marte
+* @Date:   2018-05-24 09:21:43
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-05-29 01:17:11
+*/
+html,body{
+    overflow-x:hidden;
+ overflow-y:hidden;
+}
+#index{
+    width: 100%;
+    height: 100%;
+}
+#user{
+    width: 100px;
+    height: 100px;
+    background:blue;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}

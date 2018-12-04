@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+ 
+<!--用户登陆的地址-->
+  <servlet>
+    <servlet-name>userservlet</servlet-name>
+    <servlet-class>com.action.servletUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>userservlet</servlet-name>
+    <url-pattern>/userservlet.do</url-pattern>
+</servlet-mapping>
+<!-- 用户提交建议的地址 -->
+<servlet>
+    <servlet-name>servletsuggest</servlet-name>
+    <servlet-class>com.action.servletsuggest</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>servletsuggest</servlet-name>
+    <url-pattern>/servletsuggest.do</url-pattern>
+</servlet-mapping>
+<!-- 用户填写问卷的信息地址 -->
+<servlet>
+    <servlet-name>servlettxwj</servlet-name>
+    <servlet-class>com.action.servlettxwj</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>servlettxwj</servlet-name>
+    <url-pattern>/servlettxwj.do</url-pattern>
+</servlet-mapping>
+<!-- 关于导航栏的点击目录-->
+<servlet>
+    <servlet-name>nav</servlet-name>
+    <servlet-class>com.action.navservlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>nav</servlet-name>
+    <url-pattern>/nav.do</url-pattern>
+</servlet-mapping>
+<!-- 关于教师的一系列增删改查-->
+<servlet>
+    <servlet-name>teacher</servlet-name>
+    <servlet-class>com.action.servletTeacher</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>teacher</servlet-name>
+    <url-pattern>/teacher.do</url-pattern>
+</servlet-mapping>
+<!--关于调查问卷的业务-->
+<servlet>
+    <servlet-name>paper</servlet-name>
+    <servlet-class>com.action.servletScore</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>paper</servlet-name>
+    <url-pattern>/paper.do</url-pattern>
+</servlet-mapping>
+<!--关于投诉建议的业务-->
+<servlet>
+    <servlet-name>news</servlet-name>
+    <servlet-class>com.action.servletnews</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>news</servlet-name>
+    <url-pattern>/news.do</url-pattern>
+</servlet-mapping>
+<!--关于题库的业务-->
+<servlet>
+    <servlet-name>question</servlet-name>
+    <servlet-class>com.action.servletquestion</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>question</servlet-name>
+    <url-pattern>/question.do</url-pattern>
+</servlet-mapping>
+</web-app>

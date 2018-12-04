@@ -1,0 +1,108 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, em, img, strong, b, u, i, dl, dt, dd, ol, ul, li, form, label, table, tbody, thead, tr, th, td{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+ol, ul { list-style: none; }
+img { border: 0;}
+
+#us{
+    width: 300px;
+    height: 100px;
+}
+#us>.bt{
+    width: 300px;
+    height: 50px;
+    font-size: 25px;
+    color:#4969FF;
+    position: absolute;
+    left: 40%;
+    top: 20px;
+}
+.hx{
+    width: 1px;
+    height:700px;
+    background:#E4EAEC;
+    position: absolute;
+    left: 46%;
+    top: 70px;
+}
+.yd1{
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    border-radius: 50px;
+    background:#4969C7;
+    position: absolute;
+    left:778px;
+    top: 20%;
+}
+.yd2{
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    border-radius: 50px;
+    background:#4969C7;
+    position: absolute;
+    left:778px;
+    top: 50%;
+}
+.bg1{
+
+    position: absolute;
+    left:798px;
+    top: 20%;
+    border-radius: 7px;
+    color: #fff;
+    width: 50px;
+    height: 30px;
+    background:rgba(0,0,0,0.5);
+}
+.bg2{
+    border-radius: 7px;
+    color: #fff;
+    width: 50px;
+    height: 30px;
+    background:rgba(0,0,0,0.5);
+    position: absolute;
+    left:725px;
+    top: 49%;
+}
+#text1{
+    overflow:auto;
+    overflow:scroll;
+    width: 500px;
+    height: 340px;
+    border: 1px solid #ccc;
+    margin: 0 200px;
+}
+#text2{
+    overflow:auto;
+    overflow:scroll;
+    width: 500px;
+    height: 340px;
+    border: 1px solid #ccc;
+    margin: 0 870px;
+}
+#text1>p{
+    font-size: 24px;
+    margin:18px 25px;
+}
+#text2>p{
+    font-size: 24px;
+    margin:18px 25px;
+}
+#text1>p>span{
+    font-size: 14px;
+    color: #C3B8B7;
+}
+#text2>p>span{
+    font-size: 14px;
+    color: #C3B8B7;
+}
+.gxul{
+    margin: 0 25px;
+}
+.gxul>li{
+    height: 30px;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE">
+<html>
+<head>
+<title>问卷页面-满意度调查</title>
+<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+
+<link rel="stylesheet" href="css/powerange.css">
+<link rel="stylesheet" href="css/page.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<script src="js/jquery-3.0.0.js"></script>
+<script src="js/powerange.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="js/layer.js"></script>
+<link rel="stylesheet" type="text/css" href="css/layer.css">
+</head>
+<body class="container-fluid">
+	<div id="window">
+		<!--左侧的big导航栏-->
+		<div id="leftnav">
+			<p class="nav_title">教师满意度调查系统 | Beta 1.0</p>
+			<img src="images/nav.png" alt="" id="nav_img"> <img
+				src="images/monse.png" alt="" id="monse">
+		</div>
+		<div id="text_true">
+			<img src="images/pencil.png" alt="" id="pencil"> <span
+				class="user_data"></span>
+			<p class="user_title">亲爱的小兔兔同学</p>
+			<img src="images/desk.png" alt="" id="desk" class="animated bounceIn"> <span
+				class="desk_tips">(º﹃º )点击这本书就可以看到题咯！</span> 
+				<img src="images/book.png" alt="" id="bookimg">
+		</div>
+	</div>
+	<div id="alert_page">
+		<img src="images/questionimg.png" class="questionimg">
+		<p id="page_title"></p>
+		<ul id="page_ul">
+			<li><a href="#" class="list-group-item active">
+					1-4分,请慎重选择（无法返回） </a></li>
+			<li class="page_li"><a onclick="clickone()"
+				class="list-group-item">我打1分</a></li>
+			<li class="page_li"><a onclick="clicktwo()"
+				class="list-group-item">我打2分</a></li>
+			<li class="page_li"><a onclick="clickthree()"
+				class="list-group-item">我打3分</a></li>
+			<li class="page_li"><a onclick="clickfour()"
+				class="list-group-item">我打4分</a></li>
+		</ul>
+		<p id="score_num">
+			<span class="start_num"></span>/<span class="end_num"></span>
+		</p>
+		
+	</div>
+	<form class="form-horizontal  textAlert">
+    <fieldset>
+      <div id="legend" class="">
+        <legend class="" style="font-size:26px;">&nbsp;&nbsp;&nbsp;结尾问题</legend>
+      </div>
+    <div class="control-group groupStyle">
+          <!-- Text input-->
+          <label class="control-label questionPosition questionOne" for="input01">1.请您为老师的任课情况打分</label>
+          <div class="controls">
+            <input type="text" placeholder="placeholder" class="input-xlarge text_questionOne questionOne">
+            <p class="help-block value_questionOne"  style="margin:-12px 70%;">1</p>
+          </div>
+        </div>
+    <div class="control-group groupStyle">
+          <!-- Text input-->
+          <label class="control-label questionPosition questionTwo" for="input01">2.请您为老师的周分享情况打分</label>
+          <div class="controls">
+            <input type="text" placeholder="placeholder" class="input-xlarge text_questionTwo questionTwo">
+            <p class="help-block value_questionTwo" style="margin:-12px 70%;">1</p>
+          </div>
+        </div>
+        <div class="control-group groupStyle">
+          <!-- Text input-->
+          <label class="control-label questionPosition questionThree" for="input01">3.请您为本次调查系统打分</label>
+          <div class="controls">
+            <input type="text" placeholder="placeholder" class="input-xlarge text_questionThree questionThree">
+            <p class="help-block value_questionThree"  style="margin:-12px 70%;">1</p>
+          </div>
+        </div>
+        <hr color="#ccc" style="width:545px;position: absolute;top:42%;left:3%;">
+        <div class="control-group">
+          <!-- Textarea -->
+          <label class="control-label textareatitle">4.对老师说些话吧：</label>
+          <div class="controls">
+            <div class="textarea">
+                  <textarea type=""  style="resize: none;width:540px;height:118px;margin:10px 24px;" id="textarea"></textarea>
+            </div>
+          </div>
+        </div>
+    <div class="control-group">
+          <!-- Button -->
+          <div class="controls">
+            <input type="button" class="btn btn-primary"  id="textSubmit"  style="position: absolute;left:87%;top:85%;" value="提交"></input>
+          </div>
+        </div>
+    </fieldset>
+  </form>
+  <div id="Suggestion" >
+  			<!-- 投诉的界面 -->
+  	<div class="suggetAlert">
+		 <div class="form-group">
+          <!-- Text input-->
+          <label class="control-label" for="input01">所属专业/班级</label>
+          <div class="controls">
+            <input type="text" placeholder="你的专业/班级" class="input-xlarge" id="Sug_Class">
+            <p class="help-block">请属实填写</p>
+          </div>
+        </div>
+  <div class="form-group">
+          <!-- Text input-->
+          <label class="control-label" for="input01">昵称</label>
+          <div class="controls">
+            <input type="text" placeholder="昵称" class="input-xlarge" id="Sug_Name">
+            <p class="help-block">禁止填写真实姓名</p>
+          </div>
+        </div>
+  <div class="control-group">
+          <!-- Textarea -->
+          <label class="control-label">投诉/意见</label>
+          <div class="controls">
+            <div class="textarea">
+                  <textarea type="" class="" id="Sug_Text"> </textarea>
+            </div>
+          </div>
+        </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" id="Sug_Check">确认提交信息准确无误
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default" onclick="clickTousu()">投诉</button>
+  			</div>
+  </div>
+   <div id="tips">
+            <img src="images/sure.png" alt="" id="tips_img">
+            <p class="tip_title">确定提交？</p>
+            <span class="false" onclick="clickfalse()">取消</span>
+            <span class="true" >确定</span>
+        </div>
+      <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>  
+	<script type="text/javascript">  
+			var cityip=returnCitySN["cip"];
+			var cityname=returnCitySN["cname"];
+	</script>
+	<script src="js/page.js"></script>
+</body>
+</html>

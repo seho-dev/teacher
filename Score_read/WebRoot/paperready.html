@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>教师满意度调查系统-填写信息</title>
+    <script src="js/jquery-3.0.0.js"></script>
+    <link rel="stylesheet" href="css/pageReady.css">
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>  
+	<script type="text/javascript">  
+			var cityip=returnCitySN["cip"];
+			var cityname=returnCitySN["cname"];
+	</script>
+	<script src="js/pageready.js"></script>
+</head>
+<body oncontextmenu=self.event.returnValue=false onselectstart="return false">
+        <div id="ready">
+            <div id="form">
+                <label for="username">你的昵称：
+                <input type="text" name="Username" placeholder="建议使用自定义昵称" id="username" class="check" required="required">
+                </label>
+            </br>
+                <label for="Professional">专业名称：
+                <input type="text" name="Professional"  placeholder="例如：云互联网开发工程师" id="Professional" class="check">
+                </label>
+                </br>
+                <label for="Class">所属班级：
+                <input type="text" name="Class" placeholder="例如：大专软件1703" id="Class" class="check">
+                </label>
+                </br>
+                <label for="Teacher">任课老师：
+                    <input type="text" name="Teacher" placeholder="例如：张三" id="Teacher" class="check">
+                </label>
+                </br>
+                <label for="Course">课程名称：
+                    <input type="text" name="Course" placeholder="例如：JSP程序设计" id="Course" class="check">
+                </label>
+                <p class="submit_reset" onclick="checkreset()">
+                    重新填写
+                </p>
+                <p class="submit_button" onclick="checknotnull()">
+                    确认信息
+                </p>
+            </div>
+        </div>
+        <div id="tips">
+            <img src="images/sure.png" alt="" id="tips_img">
+            <p class="tip_title">确定提交？</p>
+            <span class="false" onclick="clickfalse()">取消</span>
+            <span class="true" onclick="checksure()">确定</span>
+        </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/*
+* @Author: Marte
+* @Date:   2018-05-31 18:39:17
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-05-31 18:39:28
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, em, img, strong, b, u, i, dl, dt, dd, ol, ul, li, form, label, table, tbody, thead, tr, th, td{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+ol, ul { list-style: none; }
+img { border: 0;}
+

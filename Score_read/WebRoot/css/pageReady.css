@@ -1,0 +1,184 @@
+@font-face {
+	font-family: bannerYAHEI;
+	src: url('../fonts/HYRunYuan-35W.ttf');
+}
+body,html{
+	font-family:bannerYAHEI;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #068AEF;
+}
+#ready{
+    border-radius: 6px;
+    width: 444px;
+    height: 430px;
+    background:#fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    /*璁╁潡鏃嬭浆*/
+    -webkit-animation: divrotate 1.3s; /*Safari and Chrome*/
+}
+@keyframes divrotate {
+    0%{
+        transform:rotate(90deg);
+        -ms-transform:rotate(90deg);     /* IE 9 */
+        -moz-transform:rotate(90deg);    /* Firefox */
+        -o-transform:rotate(90deg);
+        width:30px;
+        height: 30px;
+
+    }
+    25%{
+        transform:rotate(180deg);
+        -ms-transform:rotate(180deg);     /* IE 9 */
+        -moz-transform:rotate(180deg);    /* Firefox */
+        -o-transform:rotate(180deg);
+        /*璁╁潡寰�鍙宠蛋*/
+        left:43%;
+        width:100px;
+        height: 100px;
+    }
+    50%{
+        transform:rotate(270deg);
+        -ms-transform:rotate(270deg);     /* IE 9 */
+        -moz-transform:rotate(270deg);    /* Firefox */
+        -o-transform:rotate(270deg);
+        /*璁╁潡寰�鍙宠蛋*/
+        left:-21%;
+        width: 180px;
+        height: 180px;
+    }
+    75%{
+        transform:rotate(300deg);
+        -ms-transform:rotate(300deg);     /* IE 9 */
+        -moz-transform:rotate(300deg);    /* Firefox */
+        -o-transform:rotate(300deg);
+        /*璁╁潡寰�鍙宠蛋*/
+        left:78%;
+        width: 280px;
+        height: 280px;
+    }
+    100% {
+        transform:rotate(360deg);
+        -ms-transform:rotate(360deg);   /* IE 9 */
+        -moz-transform:rotate(360deg);  /* Firefox */
+        -o-transform:rotate(360deg);
+        /*璁╁潡寰�鍙宠蛋*/
+        left:-34%;
+        width: 444px;
+        height: 430px;
+    }
+}
+@-webkit-keyframes rotate {
+    0%{
+        -moz-transform:rotate(0deg);
+    }
+    100%{
+        -moz-transform:rotate(360deg);
+    }
+}
+input{
+    width:190px;
+    height:30px;
+    border: none;
+    outline: none;
+    margin:35px 0 0 9px;
+    border-bottom:1px solid #ccc;
+}
+label{
+
+    margin:50px 0 0 113px;
+}
+#form{
+    opacity: 0;
+    margin: 0 -9px;
+    position: relative;
+}
+.submit_button{
+    cursor: pointer;
+    border-radius:2px;
+    width: 80px;
+    height: 40px;
+    color: white;
+    background:#068AEF;
+    position: absolute;
+    left:54%;
+    top:103%;
+    text-align: center;
+    line-height: 40px;
+}
+.submit_reset{
+    cursor: pointer;
+    border-radius:2px;
+    width: 80px;
+    height: 40px;
+    color: white;
+    background:orangered;
+    position: absolute;
+    left:32%;
+    top:103%;
+    text-align: center;
+    line-height: 40px;
+}
+/*寮圭獥鐨勬牱寮�*/
+#tips{
+    display: none;
+    width:300px;
+    height:200px;
+    background:#fff;
+    border-radius: 4px;
+    position: relative;
+    /*涓囪兘灞呬腑*/
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+.tip_title{
+    font-size: 20px;
+    position: absolute;
+    left:44%;
+    top:20%;
+}
+.true{
+    display:inline-block;
+    color: white;
+    cursor: pointer;
+    border-radius:2px;
+    width: 80px;
+    height: 40px;
+    background:#068AEF;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    left:56%;
+    top: 60%;
+}
+.false{
+    display:inline-block;
+    color: white;
+    cursor: pointer;
+    border-radius:2px;
+    width: 80px;
+    height: 40px;
+    background:orangered;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    left:22%;
+    top: 60%;
+}
+/*鍥剧墖鐨刢ss*/
+#tips_img{
+    position: absolute;
+    left:22%;
+    top: 24%;
+}
